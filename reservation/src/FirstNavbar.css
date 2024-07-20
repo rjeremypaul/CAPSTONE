@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.navbar {
+    top: 0;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    height: 0.75in;
+    background-color: white;
+}
+
+.nav-title {
+    margin-left: 15px;
+    margin-right: 75px;
+    color: #071598;
+    font-family: 'Sansita';
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.navbar-links-no1 {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links-no1 li {
+    margin-right: 75px;
+}
+
+.navbar-links-right {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+  }
+
+.navbar-links-no2 {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links-no2 li {
+    margin-left: 75px;
+    display: flex;
+}
+
+.navbar-links-no1 a, .navbar-links-no2 a {
+    color: #000000;
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+
+.navbar-links-no1 a:hover, .navbar-links-no2 a:hover {
+    text-decoration: underline;
+}
+
+.navbar-links-no2 a {
+    padding: 2.5px 15px;
+}
