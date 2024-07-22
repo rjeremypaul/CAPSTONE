@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import './App.css'; 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
 import FirstNavbar from './FirstNavbar';
 import Login from './login';
 import Register from './register';
+import AdminDashboard from './admindashboard'; // Add your admin dashboard component
 
 function App() {
   const [showLoginForm, setShowLoginForm] = useState(false);
@@ -10,25 +12,30 @@ function App() {
 
   const toggleLoginForm = () => {
     setShowLoginForm(!showLoginForm);
-    setShowRegisterForm(false); 
+    setShowRegisterForm(false); // Ensure register form is hidden
   };
 
   const toggleRegisterForm = () => {
     setShowRegisterForm(!showRegisterForm);
-    setShowLoginForm(false); 
+    setShowLoginForm(false); // Ensure login form is hidden
   };
 
   return (
-    <div className="App">
-      <FirstNavbar toggleLoginForm={toggleLoginForm} toggleRegisterForm={toggleRegisterForm} />
-      {showLoginForm && <Login />}
-      {showRegisterForm && <Register />}
-    </div>
-
-    
+    <Router>
+      <div className="App">
+        <FirstNavbar toggleLoginForm={toggleLoginForm} toggleRegisterForm={toggleRegisterForm} />
+        <Routes>
+          <Route path="/" element={
+            <>
+              {showLoginForm && <Login />}
+              {showRegisterForm && <Register />}
+            </>
+          } />
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
-
 
 export default App;
