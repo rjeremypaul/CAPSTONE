@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import './styles.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Initialize navigate
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!username || !password) {
-      setError('Please fill out both fields.');
-      return;
+    if (username === 'admin' && password === '123') {
+      navigate('/admin-dashboard'); // Redirect to admin dashboard or desired route
+    } else {
+      setError('Invalid credentials. Please try again.');
     }
-    // Add your login logic here
-    console.log('Username:', username);
-    setError(''); // Clear error message if validation passes
   };
 
   return (
