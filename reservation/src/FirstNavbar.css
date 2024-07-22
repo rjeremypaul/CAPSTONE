@@ -1,133 +1,30 @@
-/* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
 }
-/* Navbar styling */
+
 .navbar {
-    position: fixed; /* Keeps the navbar fixed at the top */
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    background-color: white;
-    padding: 15px 20px; /* Increase padding for more vertical space */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensures the navbar stays above other content */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-}
-
-/* Title and logo positioning */
-.nav-title {
-    color: #071598;
-    font-family: 'Sansita', sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 20px;
-    margin-right: 40px; /* Adds space between the logo and the navigation items */
-}
-
-/* Left side navigation links */
-.navbar-links-left {
-    display: flex;
-    flex: 1; /* Allow the left section to grow */
-    align-items: center; /* Align items vertically */
-}
-
-.navbar-links-no1 {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-links-no1 li {
-    margin-right: 30px; /* Adjust margin for spacing */
-}
-
-.navbar-links-no1 a {
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    text-decoration: none;
-}
-
-.navbar-links-no1 a:hover {
-    text-decoration: underline;
-}
-
-/* Right side navigation links */
-.navbar-links-right {
-    display: flex; /* Use flexbox to align links */
-    align-items: center;
-}
-
-.navbar-links-no2 {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-links-no2 li {
-    margin-left: 30px; /* Adjust margin for spacing */
-}
-
-.navbar-links-no2 a {
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    text-decoration: none;
-    padding: 2.5px 15px;
-}
-
-.navbar-links-no2 a:hover {
-    text-decoration: underline;
-}
-
-/* Adjustments for the rest of the page */
-body {
-    margin-top: 80px; /* Adjust top margin to prevent content overlap */
-}
-
-
-
-/* 
-.navbar {
     position: sticky;
-    top: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    height: 0.75in;
     background-color: white;
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .nav-title {
-    margin-left: 15px;
+    position: sticky;
+    left: 15px;
     margin-right: 75px;
     color: #071598;
-    font-family: 'Sansita', sans-serif;
+    font-family: 'Sansita';
     font-weight: bold;
     font-style: italic;
-    font-size: 20px;
-}
-
-.navbar-links-left, .navbar-links-right {
-    display: flex;
-}
-
-.navbar-links-left {
-    flex: 1;
+    font-size: 25px;
 }
 
 .navbar-links-no1 {
@@ -140,8 +37,10 @@ body {
 }
 
 .navbar-links-right {
-    margin-left: auto;
-    margin-right: 25px;
+    position: fixed;
+    right: 25px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar-links-no2 {
@@ -151,11 +50,12 @@ body {
 
 .navbar-links-no2 li {
     margin-left: 75px;
+    display: flex;
 }
 
 .navbar-links-no1 a, .navbar-links-no2 a {
     color: #000000;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     font-size: 15px;
 }
 
@@ -166,4 +66,3 @@ body {
 .navbar-links-no2 a {
     padding: 2.5px 15px;
 }
-*/

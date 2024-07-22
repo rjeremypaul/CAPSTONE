@@ -24,7 +24,7 @@ function App() {
     <Router>
       <div className="App">
         <FirstNavbar toggleLoginForm={toggleLoginForm} toggleRegisterForm={toggleRegisterForm} />
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={
             <>
               {showLoginForm && <Login />}
@@ -32,7 +32,7 @@ function App() {
             </>
           } />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        </Routes>
+        </Routes> */}
       </div>
     </Router>
   );

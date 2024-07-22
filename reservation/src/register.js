@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles.css';
+import './newstyles.css';
 
 const Register = () => {
   const [username, setUsername] = useState('');
