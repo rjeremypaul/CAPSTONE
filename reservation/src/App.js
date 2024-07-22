@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import FirstNavbar from './FirstNavbar';
+import Footer from './Footer';
 import Login from './login';
 import Register from './register';
 import AdminDashboard from './admindashboard'; // Add your admin dashboard component
@@ -33,6 +34,7 @@ function App() {
           } />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
         </Routes> */}
+        <Footer />
       </div>
     </Router>
   );
