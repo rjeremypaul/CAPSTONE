@@ -18,35 +18,46 @@ const Login = () => {
   };
 
   return (
-    <div className="form-container">
-      <h1>Welcome Back!</h1>
-      <form onSubmit={handleSubmit}>
-        {error && <p className="error-message">{error}</p>}
-        <div className="input-group">
-          <label htmlFor="login-username">Username</label>
-          <input
-            type="text"
-            id="login-username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+    <div className='ireserba-welcome-container'>
+      <div className='welcome'>
+        <div className='welcome1'>
+          <p>Your court, your time.</p>
         </div>
-        <div className="input-group">
-          <label htmlFor="login-password">Password</label>
-          <input
-            type="password"
-            id="login-password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+        <div className='welcome2'>
+          <p>Play together with</p>
+          <h1 id='iReserba'>iReserba</h1>
         </div>
-        <button type="submit">Sign in</button>
-        <p className="toggle-form">Don't have an account? <a href="register.html">Register</a></p>
-      </form>
+      </div>
+      <div className="form-container">
+        <h1>Welcome Back!</h1>
+        <form onSubmit={handleSubmit}>
+          {error && <p className="error-message">{error}</p>}
+          <div className="input-group">
+            <label htmlFor="login-username">Username</label>
+            <input
+              type="text"
+              id="login-username"
+              name="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="login-password">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Sign in</button>
+          <p className="toggle-form">Don't have an account? <a href="register.html">Register</a></p>
+        </form>
+      </div>
     </div>
   );
 };
