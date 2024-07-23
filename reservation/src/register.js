@@ -29,46 +29,57 @@ const Register = () => {
   };
 
   return (
-    <div className="form-container">
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
-        {error && <p className="error-message">{error}</p>}
-        <div className="input-group">
-          <label htmlFor="register-username">Username</label>
-          <input
-            type="text"
-            id="register-username"
-            name="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+    <div className='ireserba-welcome-container'>
+      <div className='welcome'>
+        <div className='welcome1'>
+          <p>Your court, your time.</p>
         </div>
-        <div className="input-group">
-          <label htmlFor="register-password">Password</label>
-          <input
-            type="password"
-            id="register-password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+        <div className='welcome2'>
+          <p>Play together with</p>
+          <h1 id='iReserba'>iReserba</h1>
         </div>
-        <div className="input-group">
-          <label htmlFor="register-email">Email</label>
-          <input
-            type="email"
-            id="register-email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Register</button>
-        <p className="toggle-form">Already have an account? <a href="login.html">Login</a></p>
-      </form>
+      </div>
+      <div className="form-container">
+        <h1>Register</h1>
+        <form onSubmit={handleSubmit}>
+          {error && <p className="error-message">{error}</p>}
+          <div className="input-group">
+            <label htmlFor="register-username">Username</label>
+            <input
+              type="text"
+              id="register-username"
+              name="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="register-password">Password</label>
+            <input
+              type="password"
+              id="register-password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="register-email">Email</label>
+            <input
+              type="email"
+              id="register-email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">Register</button>
+          <p className="toggle-form">Already have an account? <a href="login.html">Login</a></p>
+        </form>
+      </div>
     </div>
   );
 };
